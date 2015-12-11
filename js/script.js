@@ -1,17 +1,37 @@
+window.onresize = displayMenuOnFullScreen;
+
 function toggleMenu() {
 	buttonToggle = document.getElementById("toggle_menu");
 	navMenu = document.querySelector(".navigation ul");
 	login = document.querySelector(".navigation .login");
 
-	buttonToggle.style.backgroundPositionY = (window.getComputedStyle(buttonToggle, null).backgroundPositionY == "0px") ? "40px" : "0px";
+	toggleButtonMenu(buttonToggle);
 	toggle(navMenu);
 	toggle(login);
 }
 
-function addNewline(element){
-	element.insertAdjancedElement("afterend", "<br>");
+function toggleButtonMenu(element) {
+	buttonToggle = element.querySelector("button");
+	buttonToggle.style.backgroundPositionY = (window.getComputedStyle(buttonToggle, null).backgroundPositionY == "0px") ? "40px" : "0px";
+	textToogle = element.querySelector("span");
+	toggle(textToogle)
 }
 
+function defaultButtonToggle(element) {
+	buttonToggle = element.querySelector("button");
+	buttonToggle.style.backgroundPositionY = "0px";
+	textToogle = element.querySelector("span");
+	show(textToogle);
+}
+
+function displayMenuOnFullScreen() {
+	buttonToggle = document.getElementById("toggle_menu");
+	navMenu = document.querySelector(".navigation ul");
+	login = document.querySelector(".navigation .login");
+	toggle(buttonToggle, navMenu);
+	toggle(buttonToggle, login);
+	defaultButtonToggle(buttonToggle);
+}
 
 function getRealDisplay(elem) {
 	if (elem.currentStyle) {
@@ -41,8 +61,9 @@ function isHidden(el) {
 		true : width > 0 && height > 0 && !tr ? false :	getRealDisplay(el);
 }
 
-function toggle(el) {
-	isHidden(el) ? show(el) : hide(el);
+function toggle(elCheck, elAction) {
+	elAction = elAction||elCheck;
+	isHidden(elCheck) ? show(elAction) : hide(elAction);
 }
 
 
