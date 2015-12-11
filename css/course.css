@@ -190,6 +190,14 @@ p {
 	text-align: right;
 }
 
+.collection-item .button_more {
+	display: inline-block;
+	font-size: 0.83333125em;
+	background-color: #DDDDDD;
+	border-radius: 5px;
+	padding: 2%;
+	margin: 15px 5px 5px 5px;
+}
 
 /*FOOTER*/
 .footer {
