@@ -7,6 +7,7 @@
 	<title>My page</title>
 	<link rel="stylesheet" type="text/css" href="css/reset.css">
 	<link rel="stylesheet" href="css/course.css" />
+	<script type="text/javascript" src="js/script.js"></script>
 </head>
 <body>
 	<!--HEADER-->
@@ -21,10 +22,11 @@
 	<!--Menu-->
 	<nav class="navigation">
 		<div class="container">
+			<button id="toggle_menu" onclick="toggleMenu()"></button>
 			<ul>
-				<li><a href = "#">Home</a></li>
-				<li><a href = "#">About</a></li>
-				<li><a href = "#">Contacts</a></li>
+				<li class="cols col-1"><a href = "#">Home</a></li>
+				<li class="cols col-1"><a href = "#">About</a></li>
+				<li class="cols col-1"><a href = "#">Contacts</a></li>
 			</ul>
 
 			<!--Login Form-->
@@ -43,7 +45,7 @@
 		<div class="container">
 			<h2 class="collection-title">Image Collection<small>Visualize Quality</small></h2>
 			<div class="collections">
-				<div class="collection-item-outer">
+				<div class="collection-item-outer cols col-4">
 					<div class="collection-item">
 						<img src="img/Maisie.jpg" alt='List picture' width = '300' />
 						<div>
@@ -54,7 +56,7 @@
 					</div>					
 				</div>
 
-				<div class="collection-item-outer">
+				<div class="collection-item-outer cols col-4">
 					<div class="collection-item">
 						<img src="img/Maisie.jpg" alt='List picture' width = '300' />
 						<div>
@@ -65,7 +67,7 @@
 					</div>					
 				</div>
 
-				<div class="collection-item-outer">
+				<div class="collection-item-outer cols col-4">
 					<div class="collection-item">
 						<img src="img/Maisie.jpg" alt='List picture' width = '300' />
 						<div>
@@ -79,7 +81,7 @@
 
 			<h2 class="collection-title">Video Collection<small>Visualize Quality</small></h2>
 			<div class="collections">
-				<div class="collection-item-outer">
+				<div class="collection-item-outer cols col-4">
 					<div class="collection-item"> 
 						<video controls>
 							<source src='video/meggie.mp4' type='audio/mp4'>
@@ -92,7 +94,7 @@
 					</div>					
 				</div>
 
-				<div class="collection-item-outer">
+				<div class="collection-item-outer cols col-4">
 					<div class="collection-item">
 						<video controls>
 							<source src='video/meggie.mp4' type='audio/mp4'>
@@ -105,7 +107,7 @@
 					</div>					
 				</div>
 
-				<div class="collection-item-outer">
+				<div class="collection-item-outer cols col-4">
 					<div class="collection-item">
 						<video controls>
 							<source src='video/meggie.mp4' type='audio/mp4'>
